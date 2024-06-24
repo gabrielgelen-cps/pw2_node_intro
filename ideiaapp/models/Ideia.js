@@ -12,3 +12,5 @@ const Ideia = db.define('ideia', {
 
 Ideia.belongsTo(User)
 User.hasMany(Ideia)
+
+module.exports = Ideia
