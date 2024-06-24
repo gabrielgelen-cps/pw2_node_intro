@@ -48,17 +48,17 @@ module.exports = class IdeiaController {
     }
 
     static showIdeias(req, res) {
-        console.log(req.querry)
+        console.log(req.query)
 
         let search = ''
 
         if (req.query.search) {
-            search = req.querry.search
+            search = req.query.search
         }
 
         let order = 'DESC'
 
-        if (req.query.order) {
+        if (req.query.order === 'old') {
             order = 'ASC'
         }
         else {
